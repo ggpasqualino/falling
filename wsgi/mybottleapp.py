@@ -20,11 +20,11 @@ application = default_app()
 
 quedas = []
     
-@get('/queda')
+@route('/queda')
 def getQueda():
     return "Hello World"
     #~ return bottle.template('visual', quedas=quedas)
-    
+
 #~ @post('/queda')
 #~ def postQueda():
     #~ msg = request.forms.get('msg')
