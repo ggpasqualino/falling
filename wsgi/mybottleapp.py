@@ -26,8 +26,9 @@ def getQueda():
 
 @route('/queda', method='POST')
 def postQueda():
-    #~ msg = request.forms.get('msg')
-    #~ dataEnvio = request.forms.get('dataEnvio')
-    #~ quedas.append(Queda(msg, dataEnvio))
+    try:        
+        msg = request.forms.get('msg')
+        dataEnvio = request.forms.get('dataEnvio')
+        quedas.append(Queda(msg, dataEnvio))
     bottle.redirect('/queda')
 
