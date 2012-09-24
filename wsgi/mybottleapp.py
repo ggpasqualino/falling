@@ -34,6 +34,6 @@ def postQueda():
     except:
         bottle.redirect('/queda')
 
-@route('/static/<filename>', name='static')
-def server_static(filename):
-    return static_file(filename, root='static')
+#~ @route('/static/<filename>', name='static')
+#~ def server_static(filename):
+    #~ return static_file(filename, root='static')
