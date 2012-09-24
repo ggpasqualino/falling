@@ -22,7 +22,7 @@ quedas = []
     
 @route('/queda')
 def getQueda():
-    return bottle.template('visual', quedas=quedas, get_url=get_url)
+    return bottle.template('visual', quedas=quedas)
 
 @route('/queda', method='POST')
 def postQueda():
