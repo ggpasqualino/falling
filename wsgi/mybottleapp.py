@@ -12,23 +12,22 @@ bottle.TEMPLATE_PATH.append(
 
 application = default_app()
 
-#~ class Queda:
-    #~ def __init__(self, msg, dataEnvio):
-        #~ self.msg= msg
-        #~ self.dataEnvio = dataEnvio
-        #~ self.dataRecebido = str(datetime.now())
+class Queda:
+    def __init__(self, msg, dataEnvio):
+        self.msg= msg
+        self.dataEnvio = dataEnvio
+        self.dataRecebido = str(datetime.now())
 
 quedas = []
     
 @route('/queda')
 def getQueda():
-    return "Hello World"
-    #~ return bottle.template('visual', quedas=quedas)
+    return bottle.template('visual', quedas=quedas)
 
-#~ @post('/queda')
-#~ def postQueda():
-    #~ msg = request.forms.get('msg')
-    #~ dataEnvio = request.forms.get('dataEnvio')
-    #~ quedas.append(Queda(msg, dataEnvio))
-    #~ bottle.redirect('/queda')
+@post('/queda', method='POST')
+def postQueda():
+    msg = request.forms.get('msg')
+    dataEnvio = request.forms.get('dataEnvio')
+    quedas.append(Queda(msg, dataEnvio))
+    bottle.redirect('/queda')
 
