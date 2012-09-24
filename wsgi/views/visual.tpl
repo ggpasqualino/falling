@@ -2,7 +2,7 @@
     <head>
         <title>Falling Detection</title>
         <!--Bootstrap-->
-        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">    
+        <link rel="stylesheet" type="text/css" href= url("static/bootstrap/css/bootstrap.css")>    
     </head>
     <body>
         <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
