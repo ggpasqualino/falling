@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from bottle import route, default_app, TEMPLATE_PATH, template
+from bottle import route, default_app, TEMPLATE_PATH, template, static_file, get_url
 import os
 import bottle
 from datetime import datetime
@@ -22,7 +22,7 @@ quedas = []
     
 @route('/queda')
 def getQueda():
-    return bottle.template('visual', quedas=quedas)
+    return bottle.template('visual', quedas=quedas, 'get_url' : get_url)
 
 @route('/queda', method='POST')
 def postQueda():
@@ -33,3 +33,7 @@ def postQueda():
         return msg + " " + dataEnvio
     except:
         bottle.redirect('/queda')
+        
+@route('/static/:path#.+#', name='static')
+def static(path):
+    return static_file(path, root='static')
