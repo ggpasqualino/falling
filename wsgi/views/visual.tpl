@@ -2,7 +2,7 @@
     <head>
         <title>Falling Detection</title>
         <!--Bootstrap-->
-        <link rel="stylesheet" type="text/css" href= "{{ get_url('static', path='bootstrap/css/bootstrap.css') }}" )>    
+        <link rel="stylesheet" type="text/css" href= "{{ get_url('static', filename='bootstrap.css') }}">    
     </head>
     <body>
         <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
