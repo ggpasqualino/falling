@@ -27,8 +27,8 @@ def getQueda():
 @route('/queda', method='POST')
 def postQueda():
     try:        
-        msg = request.forms.get('msg')
-        dataEnvio = request.forms.get('dataEnvio')
+        msg = bottle.request.forms.get('msg')
+        dataEnvio = bottle.request.forms.get('dataEnvio')
         quedas.append(Queda(msg, dataEnvio))
         return msg + " " + dataEnvio
     except:
@@ -45,6 +45,6 @@ def login_form():
 
 @route('/login', method='POST')
 def login_submit():
-    name     = request.forms.get('name')
-    password = request.forms.get('password')
+    name     = bottle.request.forms.get('name')
+    password = bottle.request.forms.get('password')
     return "<p>Your login was correct</p>"
