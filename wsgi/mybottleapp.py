@@ -24,7 +24,7 @@ quedas = []
 def getQueda():
     return bottle.template('visual', quedas=quedas)
 
-@post('/queda', method='POST')
+@route('/queda', method='POST')
 def postQueda():
     msg = request.forms.get('msg')
     dataEnvio = request.forms.get('dataEnvio')
