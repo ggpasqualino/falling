@@ -16,7 +16,7 @@ class Queda:
     def __init__(self, msg, dataEnvio):
         self.msg= msg
         self.dataEnvio = dataEnvio
-        self.dataRecebido = str(datetime.now())
+        self.dataRecebido = datetime.utcnow().strftime("%Y/%m/%d %H:%M")
 
 quedas = []
     
