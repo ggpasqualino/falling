@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from bottle import route, default_app, TEMPLATE_PATH, template, static_file, get_url
+from bottle import route, default_app, TEMPLATE_PATH, template, get_url
 import os
 import bottle
 from datetime import datetime
