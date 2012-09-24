@@ -30,6 +30,7 @@ def postQueda():
         msg = request.forms.get('msg')
         dataEnvio = request.forms.get('dataEnvio')
         quedas.append(Queda(msg, dataEnvio))
+        return msg + " " + dataEnvio
     except:
         pass
     bottle.redirect('/queda')
