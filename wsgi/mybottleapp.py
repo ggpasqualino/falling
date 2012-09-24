@@ -18,7 +18,7 @@ class Queda:
         self.dataEnvio = dataEnvio
         self.dataRecebido = str(datetime.now())
 
-quedas = []
+quedas = [Queda("Teste", "24/09/2012 09:10")]
     
 @route('/queda')
 def getQueda():
