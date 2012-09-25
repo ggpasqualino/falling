@@ -4,8 +4,7 @@
         <!--Bootstrap-->
         <link rel="stylesheet" type="text/css" href= "{{ get_url('static', filename='bootstrap.css') }}">    
     </head>
-    <body>
-    <div class="row">
+    <body>    
         <div class="span8">
             <table class="table table-striped table-bordered">
             <thead>
@@ -25,7 +24,6 @@
                 %end
                 </tbody>
             </table>
-        </div>
-    </div>
+        </div>    
     </body>
 </html>
