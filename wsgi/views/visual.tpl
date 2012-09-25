@@ -5,8 +5,7 @@
         <link rel="stylesheet" type="text/css" href= "{{ get_url('static', filename='bootstrap.css') }}">    
     </head>
     <body>
-        <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
-    <div class=".row">
+    <div class="row">
         <div class="span8">
             <table class="table table-striped table-bordered">
             <thead>
