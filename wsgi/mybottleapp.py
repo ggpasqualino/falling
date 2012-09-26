@@ -22,7 +22,7 @@ mongo_db.authenticate(
 
 @route('/queda')
 def getQueda():
-    quedas = list(mongo_db.quedas.find())
+    quedas = list(mongo_db.quedas.find().sort('dataRecebido', pymongo.DESCENDING))
     return bottle.template('visual', quedas=quedas, get_url=application.get_url)
 
 @route('/queda', method='POST')
