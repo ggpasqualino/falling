@@ -27,11 +27,16 @@ def getQueda():
 
 @route('/queda', method='POST')
 def postQueda():
-    try:        
-        msg = bottle.request.forms.get('msg')
+    try:                
         dataEnvio = bottle.request.forms.get('dataEnvio')
-        nova_queda = {'msg':msg, 'dataEnvio':dataEnvio, 
-                                'dataRecebido':datetime.utcnow().strftime("%Y/%m/%d %H:%M")}
+        pessoa = bottle.request.forms.get('pessoa')
+        msg = bottle.request.forms.get('msg')
+        local = bottle.request.forms.get('local')
+        nova_queda = {'dataEnvio':dataEnvio, 
+                                'dataRecebido':datetime.utcnow().strftime("%Y/%m/%d %H:%M"),
+                                'pessoa':pessoa, 
+                                'msg':msg, 
+                                'local':local,}
         mongo_db.quedas.insert(nova_queda)
         return msg + " " + dataEnvio
     except:
