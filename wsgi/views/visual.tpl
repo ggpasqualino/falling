@@ -8,7 +8,7 @@
     </head>
     <body>    
         <div class="container">
-            <h1>Sistema de Detecção de Quedas</h1>
+            <h1>Sistema para Monitoração de Queda de Idosos</h1>
         </div>
         <div class="container">
             <table class="table table-striped table-bordered">
